@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+<style>
+  body {
+    background: linear-gradient(120deg, rgb(202, 71, 174), rgb(53, 201, 193));
+    overflow: hidden;
+    
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    color: rgb(212, 3, 3);
+    
+  }
+div{
+    border: 0px solid #cf1010;
+    color: rgb(132, 86, 138);
+    border-radius: 5px;
+    padding: 2px;
+    margin: 30px 5;
+    background-attachment: scroll;
+  
+  }
+  h1 {
+    font-size: 5.5em;
+    padding: 0.9em;
+    margin: 0;
+    font-weight: 300;
+    text-align: center;
+}
+form {
+    background: linear(120deg, rgb(170, 46, 207), rgb(17, 16, 99));
+    }
+    .text-muted {
+    color: #d624cd75!important;
+    text-shadow: 3px 3px 5px rgb(255, 255, 255);
+    
+}
+.btn-primary {
+  background-color:rgb(223, 226, 226);
+}
+</style>
+</head>
+<body>
+  
+    <div class="container p-2">
+        <h1 class="text-left mb-7 text-uppercase text-muted">R T C - Real Time Chat.</h0>    
+            <div class="text-uppercase left">
+              <form action="" method="POST">
+                <div class="form-group">
+                  <label for="_email">Name.</label>
+                  <input type="text" name="user_name" id="_rname" class="form-control" placeholder="Name" rnodeequired>
+                </div>
+                <div class="form-group">
+                  <label for="_email">Email.</label>
+                  <input type="text" name="user_email" id="_email" class="form-control" placeholder="Email" rnodeequired>
+                </div>
+                <% if (locals.login_errors) { 
+                  login_errors.forEach(function(error_msg){ %>
+                  <div class= "alert alert-danger" role="alert"><%= error_msg %></div>
+                <% });
+                } %>
+                <button type="submit" class="btn btn-primary">Chat</button>
+            </form>      
+        </div>
+    </div>
+</body>
+</html>
